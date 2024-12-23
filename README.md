@@ -5,6 +5,7 @@ This project is a web application that allows users to upload, convert, and view
 ## Features
 
 - **Upload Videos**: Users can upload videos in various formats (currently supports **AVI**).
+- - **Video Streaming in Chunks**: Videos are streamed in 1MB chunks. The backend will send 1MB of video data each time it's requested by the browser. This allows for efficient video streaming even for large video files.
 - **Convert AVI to MP4**: The backend uses **FFmpeg** to convert uploaded **AVI** videos to **MP4** format.
 - **Generate Thumbnails**: Thumbnails for uploaded videos are automatically generated and stored.
 - **View Uploaded Videos**: After uploading and converting the videos, users can view the uploaded videos in the browser.
