@@ -2,14 +2,14 @@ import { Progress } from "flowbite-react";
 
 
 type ProgressComponentProps = {
-  percentageRef: React.MutableRefObject<number>;
+  percentage:number
 };
-function ProgressComponent({ percentageRef }: ProgressComponentProps) {
+function ProgressComponent({ percentage }: ProgressComponentProps) {
   return (
     <div className="my-3 ">
       <Progress
         className="w-full text-center"
-        progress={percentageRef.current}
+        progress={percentage}
         progressLabelPosition="inside"
         textLabelPosition="outside"
         size="sm"

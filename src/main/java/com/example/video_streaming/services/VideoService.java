@@ -10,4 +10,5 @@ public interface VideoService {
      List<Video> getAllVideos();
      Video getVideoById(String id);
      Video saveVideo(Video video, MultipartFile file);
+     public void createThumbnail(String videoId,String folderPath);
 }

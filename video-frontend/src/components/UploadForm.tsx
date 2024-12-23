@@ -12,7 +12,7 @@ type UploadFormProps = {
   fileRef: MutableRefObject<HTMLInputElement | null>;
   handleFileChange: ChangeEventHandler<HTMLInputElement>;
   isLoading: boolean;
-  percentageRef: React.MutableRefObject<number>;
+  percentage: number;
   handleFormSubmit: MouseEventHandler<HTMLButtonElement>;
 };
 
@@ -24,7 +24,7 @@ function UploadForm({
   fileRef,
   handleFileChange,
   isLoading,
-  percentageRef,
+  percentage,
   handleFormSubmit,
 }: UploadFormProps) {
   return (
@@ -46,7 +46,7 @@ function UploadForm({
       </div>
 
       <FileInputComponent fileRef={fileRef} onChange={handleFileChange} />
-      {isLoading && <ProgressComponent percentageRef={percentageRef} />}
+      {isLoading && <ProgressComponent percentage={percentage} />}
 
       <ButtonComponent buttonTitle="Upload" onClick={handleFormSubmit} />
     </form>

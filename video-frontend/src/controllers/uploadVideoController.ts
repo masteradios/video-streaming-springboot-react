@@ -3,16 +3,18 @@ import { AxiosProgressEvent } from "axios";
 import ErrorResponse from "../models/errorResponse";
 import Video from "../models/video";
 import { uploadVideoService } from "../services/uploadVideoService";
+import { Dispatch } from "react";
 
 
 export const uploadVideoController = async (
   formData: FormData,
-  uploadPercentageRef: React.MutableRefObject<number>
+  setPercentage: Dispatch<React.SetStateAction<number>>
 ): Promise<Video> => {
   const onUploadProgress = (progressEvent: AxiosProgressEvent) => {
-    uploadPercentageRef.current = Math.round(
+    const percentage = Math.round(
       (progressEvent.loaded * 100) / progressEvent.total!
     );
+    setPercentage(percentage);
   };
 
   try {

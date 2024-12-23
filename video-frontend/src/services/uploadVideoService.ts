@@ -6,6 +6,7 @@ import ErrorResponse from "../models/errorResponse";
 
 export const uploadVideoService = async (
   formData: FormData,
+  
   onUploadProgress: (progressEvent: AxiosProgressEvent) => void
 ): Promise<Video> => {
   try {
@@ -35,3 +36,4 @@ export const uploadVideoService = async (
     throw  errorResponse;
   }
 };
+
