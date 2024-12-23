@@ -21,5 +21,10 @@ This project is a web application that allows users to upload, convert, and view
   - **FFmpeg**: A powerful multimedia processing tool to convert videos from **AVI** format to **MP4** and generate thumbnails.
   
 - **Database**: Local Host for storing Videos and Postgres for storing metadata.
+- **Implementation**
+  
+
+https://github.com/user-attachments/assets/ca152875-6f49-4fd1-8397-c5ff066930d9
+
 
 
